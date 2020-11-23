@@ -1,0 +1,17 @@
+# Dependencies
+node_modules
+
+# Production
+build
+
+# Documentation
+doc
+
+# Secrets
+.env
+
+# Sources
+source
+
+# WebStorm IDE
+.idea

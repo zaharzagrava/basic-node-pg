@@ -1,0 +1,23 @@
+version: "3"
+services:
+  api:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+      args:
+        PORT: 4001
+    depends_on:
+      - db
+    volumes:
+      - ./:/usr/src/app
+    environment:
+      - NODE_ENV=production
+    ports:
+      - "4001:4001"
+    command: npm run start
+  db:
+    image: postgres:9.6.6-alpine
+    volumes:
+      - /var/lib/postgresql/basic-node-pg/data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"

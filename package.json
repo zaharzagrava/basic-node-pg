@@ -1,0 +1,24 @@
+{
+  "name": "basic-node-pg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run db:migrate && node index.js",
+    "db:create": "node_modules/.bin/sequelize db:create",
+    "db:migrate": "node_modules/.bin/sequelize db:migrate",
+    "db:seed": "node_modules/.bin/sequelize db:seed:all",
+    "db:migration:create": "node_modules/.bin/sequelize migration:create --name users"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "pg": "^7.14.0",
+    "sequelize": "^5.21.2"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^5.5.1"
+  }
+}
